@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>因式分解</title>
+	<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+		});
+	</script>
+  	<script src="GetFactorization.js"></script>
+	<style>
+	.a {
+ 	 font-family: Arial, Helvetica, sans-serif;
+       font-size:14px;
+	}
+      .b {
+ 	 font-family: Arial, Helvetica, sans-serif;
+       font-size:14px;
+       padding-left:20px;
+	}
+      .c {
+ 	 font-family: Arial, Helvetica, sans-serif;
+       font-size:14px;
+       padding-left:35px;
+	}
+      .d {
+ 	 font-family: Arial, Helvetica, sans-serif;
+       font-size:13px;
+       margin-left:20px;
+	}
+		 .e {
+  	 font-family: Arial, Helvetica, sans-serif;
+        font-size:13px;
+        margin-left:13px;
+	}
+		.f{
+			font-family: Arial, Helvetica, sans-serif;
+				 font-size:13px;
+				 margin-left:28px;
+	}
+		.g{
+			font-family: Arial, Helvetica, sans-serif;
+				 font-size:13px;
+				 margin-left:37px;
+		}
+	</style>
+</head>
+
+<body>
+  <p style="font-size:20px;"><strong><u>基礎知識重溫 - 因式分解</u></strong></p>
+
+  <div>
+    <span class="a";>1.</span>
+    <span class="b";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q1a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q1b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>2.</span>
+    <span class="b";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q2a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q2b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>3.</span>
+    <span class="b";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q3a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q3b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <p style="text-align: center; page-break-after: always;">~1~</p>
+
+  <br><br>
+
+  <div>
+    <span class="a";>4.</span>
+    <span class="b";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q4a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q4b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>5.</span>
+    <span class="b";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q5a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q5b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>6.</span>
+    <span class="b";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q6a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q6b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <p style="text-align: center; page-break-after: always;">~2~</p>
+
+  <br><br>
+
+  <div>
+    <span class="a";>7.</span>
+    <span class="b";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q7a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q7b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>8.</span>
+    <span class="b";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q8a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q8b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>9.</span>
+    <span class="b";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q9a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q9b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <p style="text-align: center; page-break-after: always;">~3~</p>
+
+  <br><br>
+
+  <div>
+    <span class="a";>10.</span>
+    <span class="e";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q10a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q10b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>11.</span>
+    <span class="e";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q11a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q11b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>12.</span>
+    <span class="e";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q12a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q12b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <p style="text-align: center; page-break-after: always;">~4~</p>
+
+  <br><br>
+
+  <div>
+    <span class="a";>13.</span>
+    <span class="e";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q13a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q13b" class="d";></span>
+  </div>
+	<div style="margin-top:5px;">
+    <span class="c";>(c)</span>
+    <span id="Q13c" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>14.</span>
+    <span class="e";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q14a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q14b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>15.</span>
+    <span class="e";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q15a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q15b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <p style="text-align: center; page-break-after: always;">~5~</p>
+
+  <br><br>
+
+  <div>
+    <span class="a";>16.</span>
+    <span class="e";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q16a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q16b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div>
+    <span class="a";>17.</span>
+    <span class="e";>因式分解</span>
+  </div>
+  <div style="margin-top:10px;">
+    <span class="c";>(a)</span>
+    <span id="Q17a" class="d";></span>
+  </div>
+  <div style="margin-top:5px;">
+    <span class="c";>(b)</span>
+    <span id="Q17b" class="d";></span>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <p style="text-align: center; page-break-after: always;">~6~</p>
+
+	<p style="font-size:20px;"><strong><u>答案</u></strong></p>
+
+	<div style="display: flex;">
+		<div style="width: 50%;">
+			<div>
+	    <span class="a";>1.</span>
+	    <span class="e";>(a)</span>
+			<span id="Ans_1a" class="d"></span>
+	  	</div>
+			<div style="margin-top:5px;">
+	    <span class="f"; >(b)</span>
+			<span id="Ans_1b" class="d"></span>
+	  	</div>
+		</div>
+
+		<div style="width: 50%; float:right;">
+			<div>
+	    <span class="a";>10.</span>
+	    <span class="e";>(a)</span>
+			<span id="Ans_10a" class="d"></span>
+	  	</div>
+			<div style="margin-top:5px;">
+	    <span class="g";>(b)</span>
+			<span id="Ans_10b" class="d"></span>
+	  	</div>
+		</div>
+	</div>
+
+	<div style="display: flex; margin-top: 30px;">
+		<div style="width: 50%;">
+			<div>
+	    <span class="a";>2.</span>
+	    <span class="e";>(a)</span>
+			<span id="Ans_2a" class="d"></span>
+	  	</div>
+			<div style="margin-top:5px;">
+	    <span class="f"; >(b)</span>
+			<span id="Ans_2b" class="d"></span>
+	  	</div>
+		</div>
+
+		<div style="width: 50%; float:right;">
+			<div>
+	    <span class="a";>11.</span>
+	    <span class="e";>(a)</span>
+			<span id="Ans_11a" class="d"></span>
+	  	</div>
+			<div style="margin-top:5px;">
+	    <span class="g";>(b)</span>
+			<span id="Ans_11b" class="d"></span>
+	  	</div>
+		</div>
+	</div>
+
+	<div style="display: flex; margin-top: 30px;">
+		<div style="width: 50%;">
+			<div>
+	    <span class="a";>3.</span>
+	    <span class="e";>(a)</span>
+			<span id="Ans_3a" class="d"></span>
+	  	</div>
+			<div style="margin-top:5px;">
+	    <span class="f"; >(b)</span>
+			<span id="Ans_3b" class="d"></span>
+	  	</div>
+		</div>
+
+		<div style="width: 50%; float:right;">
+			<div>
+	    <span class="a";>12.</span>
+	    <span class="e";>(a)</span>
+			<span id="Ans_12a" class="d"></span>
+	  	</div>
+			<div style="margin-top:5px;">
+	    <span class="g";>(b)</span>
+			<span id="Ans_12b" class="d"></span>
+	  	</div>
+		</div>
+	</div>
+
+	<div style="display: flex; margin-top: 30px;">
+		<div style="width: 50%;">
+			<div>
+			<span class="a";>4.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_4a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="f"; >(b)</span>
+			<span id="Ans_4b" class="d"></span>
+			</div>
+		</div>
+
+		<div style="width: 50%; float:right;">
+			<div>
+			<span class="a";>13.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_13a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="g";>(b)</span>
+			<span id="Ans_13b" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="g";>(c)</span>
+			<span id="Ans_13c" class="d"></span>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: flex; margin-top: 30px;">
+		<div style="width: 50%;">
+			<div>
+			<span class="a";>5.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_5a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="f"; >(b)</span>
+			<span id="Ans_5b" class="d"></span>
+			</div>
+		</div>
+
+		<div style="width: 50%; float:right;">
+			<div>
+			<span class="a";>14.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_14a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="g";>(b)</span>
+			<span id="Ans_14b" class="d"></span>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: flex; margin-top: 30px;">
+		<div style="width: 50%;">
+			<div>
+			<span class="a";>6.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_6a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="f"; >(b)</span>
+			<span id="Ans_6b" class="d"></span>
+			</div>
+		</div>
+
+		<div style="width: 50%; float:right;">
+			<div>
+			<span class="a";>15.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_15a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="g";>(b)</span>
+			<span id="Ans_15b" class="d"></span>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: flex; margin-top: 30px;">
+		<div style="width: 50%;">
+			<div>
+			<span class="a";>7.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_7a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="f"; >(b)</span>
+			<span id="Ans_7b" class="d"></span>
+			</div>
+		</div>
+
+		<div style="width: 50%; float:right;">
+			<div>
+			<span class="a";>16.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_16a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="g";>(b)</span>
+			<span id="Ans_16b" class="d"></span>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: flex; margin-top: 30px;">
+		<div style="width: 50%;">
+			<div>
+			<span class="a";>8.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_8a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="f"; >(b)</span>
+			<span id="Ans_8b" class="d"></span>
+			</div>
+		</div>
+
+		<div style="width: 50%; float:right;">
+			<div>
+			<span class="a";>17.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_17a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="g";>(b)</span>
+			<span id="Ans_17b" class="d"></span>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: flex; margin-top: 30px;">
+		<div style="width: 50%;">
+			<div>
+			<span class="a";>9.</span>
+			<span class="e";>(a)</span>
+			<span id="Ans_9a" class="d"></span>
+			</div>
+			<div style="margin-top:5px;">
+			<span class="f"; >(b)</span>
+			<span id="Ans_9b" class="d"></span>
+			</div>
+		</div>
+	</div>
+
+
+  <script>FactorizationQuestionType1();</script>
+  <script>FactorizationQuestionType2();</script>
+	<script>FactorizationQuestionType3();</script>
+	<script>FactorizationQuestionType4();</script>
+  <script>FactorizationQuestionType5();</script>
+	<script>FactorizationQuestionType6();</script>
+	<script>FactorizationQuestionType7();</script>
+	<script>FactorizationQuestionType8();</script>
+	<script>FactorizationQuestionType9();</script>
+	<script>FactorizationQuestionType10();</script>
+	<script>FactorizationQuestionType11();</script>
+	<script>FactorizationQuestionType12();</script>
+	<script>FactorizationQuestionType13();</script>
+	<script>FactorizationQuestionType14();</script>
+	<script>FactorizationQuestionType15();</script>
+	<script>FactorizationQuestionType16();</script>
+	<script>FactorizationQuestionType17();</script>
+
+</body>
+
+</html>
